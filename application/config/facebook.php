@@ -25,5 +25,5 @@ $config['facebook_login_type']          = 'web';
 $config['facebook_login_redirect_url']  = 'example/web_login';
 $config['facebook_logout_redirect_url'] = 'example/logout';
 $config['facebook_permissions']         = array('public_profile', 'email');
-$config['facebook_graph_version']       = 'v2.10';
+$config['facebook_graph_version']       = 'v2.10'; //2.4
 $config['facebook_auth_on_load']        = TRUE;

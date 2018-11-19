@@ -86,7 +86,7 @@ jQuery(function($) {
 	var signuphldr = $('#get-started-modal .signup-main');
 	signuphldr.on('click', '.main .fq-btn', function() {
 		type = $(this).html();
-		signuphldr.find('.sub .sub-main .btn-su-back').html('<i class="fa fa-chevron-left"></i> ' + type);
+		signuphldr.find('.sub .sub-main .btn-su-back span').html(type);
 		signuphldr.find('.main').hide();
 		signuphldr.find('.sub').show();
 	});
@@ -99,7 +99,7 @@ jQuery(function($) {
 	signuphldr.on('click', '.sub .sub-main .btn-su-email', function() {
 		signuphldr.find('.sub .sub-main').hide();
 		signuphldr.find('.sub .sub-form').show();
-		signuphldr.find('.sub .sub-form .btn-su-back').html('<i class="fa fa-chevron-left"></i> ' + type);
+		signuphldr.find('.sub .sub-form .btn-su-back span').html(type);
 
 		if(type == 'Client') {
 			signuphldr.find('.sub .sub-form .advisor-frm-row').hide();
@@ -116,7 +116,7 @@ jQuery(function($) {
 
 	/* pages function */
 	//home
-	$('.fq-header .content-wrpr .btn-get-started, .priority-row .btn-get-started, .btn-no-account, .services-page .btn-get-started, .subscription-row .fq-client, .subscription-row .fq-advisor').on('click', function(e) {
+	$('.fq-header .content-wrpr .btn-get-started, .priority-row .btn-get-started, .btn-no-account, .services-page .btn-get-started, .subscription-row .fq-client, .subscription-row .fq-advisor, .fq-header #login-item .btn-login').on('click', function(e) {
 		e.preventDefault();
 		$('.login-wrapper').fadeOut(800);
 		$('.login-wrapper:before').fadeOut(800);
@@ -129,6 +129,9 @@ jQuery(function($) {
 	    slidesToScroll: 1,
 	    //arrows: true,
 	    nextArrow: "<span class='slick-next pull-right carousel-btns'></span>"
+	});
+	$('.team-wrpr').on('click', '.btn-member-read-more', function() {
+		$('.fq-modal.fq-members').fadeIn(800);
 	});
 
 	//services
@@ -177,6 +180,8 @@ jQuery(function($) {
 		var formData = new FormData($(this)[0]);
 		var pwd = $('#frm-signup input[name=pword]').val();
 		var cpwd = $('#frm-signup input[name=cpword]').val();
+		var type = $('.signup-main .sub-form .btn-su-back span').html();
+		formData.append('type', type);
 
 		if(pwd != '' && pwd != cpwd) {
 			$('#frm-signup input[name=cpword]').focus();
@@ -194,11 +199,22 @@ jQuery(function($) {
 				processData: false,
 				data: formData,
 				success: function(response) {
+					signuphldr.find('.main').show();
+					signuphldr.find('.sub').hide();
+					signuphldr.find('.sub .sub-main').show();
+					signuphldr.find('.sub .sub-form').hide();
+					$('#frm-signup').trigger('reset');
 					$('#get-started-modal').fadeOut(800);
 					$('#frm-signup button[type=submit]').html('SIGN UP');
+					$('.fq-modal.fq-alert .fq-modal-content').html('<h3>Kindly check your email for confirmation</h3>');
+					$('.fq-modal.fq-alert').fadeIn(800);
 				}
 			});
 		}
+	});
+
+	$('.login-wrapper').on('click', '.fq-btn-advisor, .fq-btn-client', function() {
+		//authenticate({'name': 'Resty Jay'}, 'email');
 	});
 
 	$('#frm-signup').on('click', '#icn-pword', function() {
@@ -233,10 +249,10 @@ jQuery(function($) {
 			processData: false,
 			data: formData,
 			success: function(response) {
-				console.log(response);
 				var data = JSON.parse(response);
 				$('.fq-modal.fq-alert .fq-modal-content').html(data.response);
 				$('.fq-modal.fq-alert').fadeIn(800);
+				$('#frm-inquiry, #frm-contact').trigger('reset');
 				$('#frm-inquiry, #frm-contact').find('button[type=submit]').html('Submit <i class="fa fa-chevron-right"></i>');
 			}
 		});
@@ -286,6 +302,7 @@ function signOut() {
     	var site = "https://accounts.google.com/logout";
     	document.getElementById('googlelogoutframe').src = site;
     	unsetSession();
+  		window.location.reload();
     });
 }
 // Called when Google Javascript API Javascript is loaded

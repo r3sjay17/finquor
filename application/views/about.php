@@ -104,7 +104,7 @@
 								<h2 class="fq-name">Don-Don Adolfo G. Crisostomo</h2>
 								<h3 class="fq-position">Chief Executive Officer, Founder</h3>
 								<div class="desc">
-									A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy emulation. He is also an entrepreneur, professor, business consultant, <a href="#">READ MORE...</a> 
+									A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy emulation. He is also an entrepreneur, professor, business consultant, <button type="button" class="btn-member-read-more">READ MORE...</button> 
 								</div>
 							</div>
 							<div class="col-md-2"></div>
@@ -120,7 +120,7 @@
 								<h2 class="fq-name">Don-Don Adolfo G. Crisostomo</h2>
 								<h3 class="fq-position">Chief Executive Officer, Founder</h3>
 								<div class="desc">
-									A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy emulation. He is also an entrepreneur, professor, business consultant, <a href="#">READ MORE...</a> 
+									A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy emulation. He is also an entrepreneur, professor, business consultant, <button type="button" class="btn-member-read-more">READ MORE...</button>  
 								</div>
 							</div>
 							<div class="col-md-2"></div>

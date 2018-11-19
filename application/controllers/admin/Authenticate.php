@@ -27,13 +27,14 @@ class Authenticate extends CI_Controller {
 					$lname = (!empty($_POST['data']['wea'])) ? $_POST['data']['wea'] : '';
 					break;
 				default:
-					
+					$fname = (isset($_POST['name'])) ? $_POST['name'] : '';
 					break; 
 			}
 			$this->session->set_userdata('provider', $_POST['provider']);
 			$this->session->set_userdata('name', $fname);
 		} elseif(isset($_POST['email'])) {
 			$email = (isset($_POST['email'])) ? $_POST['email'] : '';
+			$number = (isset($_POST['number'])) ? $_POST['number'] : '';
 			$fname = (isset($_POST['fname'])) ? $_POST['fname'] : '';
 			$lname = (isset($_POST['lname'])) ? $_POST['lname'] : '';
 			$bdate = (isset($_POST['bdate'])) ? $_POST['bdate'] : '';

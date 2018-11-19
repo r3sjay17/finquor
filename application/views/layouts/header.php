@@ -12,13 +12,13 @@
 	<!-- <meta name="google-signin-client_id" content="471011139323-avtmuha9addgfpklpe3tauvrfaisoila.apps.googleusercontent.com"> -->
 	<meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="//apis.google.com/js/platform.js" async defer></script>
 
 	<title>FinQuor</title>
 
 	<!-- font style -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Cairo|Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="//fonts.googleapis.com/css?family=Cairo|Montserrat" rel="stylesheet">
 
 	<!-- main style sheet -->
 	<link rel="stylesheet" href="<?=base_url('assets/css/bootstrap.min.css')?>">
@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="<?=base_url('assets/css/slick-theme.min.css')?>">
 
 	<!-- HTTPS required. HTTP will give a 403 forbidden response -->
-	<script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
+	<script src="//sdk.accountkit.com/en_US/sdk.js"></script>
 
 	
 	<!-- scripts -->
@@ -42,6 +42,8 @@
 
 </head>
 <body class="fq-landing <?=$page?>-page">
+
+	<?php if($page != 'services') : ?>
 	<!-- social links -->
 	<div class="social-links fq-sticky">
 		<a href="#" class="fq-fb"><i class="fa fa-facebook-square"></i></a>
@@ -50,6 +52,7 @@
 		<a href="#" class="fq-mail"><i class="fa fa-envelope-o"></i></a>
 		<p>SHARE</p>
 	</div>
+	<?php endif; ?>
 
 	<!-- header wrapper -->
 	<div class="fq-header">
@@ -98,8 +101,11 @@
 							<li class="menu-item <?=($page == 'contact') ? 'active' : '';?>">
 								<a href="<?=base_url('contact')?>">Contact Us</a>
 							</li>
+							<li class="menu-item" id="login-item">
+								<button type="button" class="btn-login">REGISTER</button>
+							</li>
 
-							<?php if(!isset($_SESSION['provider'])) : ?>
+							<!-- <?php if(!isset($_SESSION['provider'])) : ?>
 							<li class="menu-item" id="login-item">
 								<button type="button" class="btn-login">LOG IN</button>
 
@@ -117,10 +123,8 @@
 									</div>
 									<div class="api-login-holder">
 										<p>or</p>
-										<!-- <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div> -->
 
 										<button type="button" class="fq-btn-fb"><i class="fa fa-facebook-square"></i> Login with Facebook</button>
-										<!-- <button type="button" class="fq-btn-google" data-onsuccess="onSignIn"><i class="fa fa-google"></i> Login with Google</button> -->
 										<div class="g-signin2" data-onsuccess="onSignIn"></div>
 									</div>
 									<a href="#" class="btn-no-account">No account yet? SIGN UP HERE.</a>
@@ -142,7 +146,7 @@
 									<?php endif; ?>
 								</div>
 							</li>
-						<?php endif; ?>
+							<?php endif; ?> -->
 						</ul>
 					</div>
 				</div>

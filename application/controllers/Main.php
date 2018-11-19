@@ -6,6 +6,7 @@ Class Main extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		//header('X-Frame-Options: SAMEORIGIN');
 	}
 
 	public function index() {
@@ -13,6 +14,7 @@ Class Main extends CI_Controller {
 
 		$this->load->view('layouts/header', $data);
 		$this->load->view('index');
+		$this->load->view('layouts/modal');
 		$this->load->view('layouts/footer');
 	}
 
@@ -21,6 +23,7 @@ Class Main extends CI_Controller {
 
 		$this->load->view('layouts/header', $data);
 		$this->load->view('about');
+		$this->load->view('layouts/modal');
 		$this->load->view('layouts/footer');
 	}
 
@@ -30,6 +33,7 @@ Class Main extends CI_Controller {
 
 		$this->load->view('layouts/header', $data);
 		$this->load->view('services');
+		$this->load->view('layouts/modal');
 		$this->load->view('layouts/footer');
 	}
 
@@ -38,6 +42,7 @@ Class Main extends CI_Controller {
 
 		$this->load->view('layouts/header', $data);
 		$this->load->view('subscription');
+		$this->load->view('layouts/modal');
 		$this->load->view('layouts/footer');
 	}
 
@@ -46,6 +51,7 @@ Class Main extends CI_Controller {
 
 		$this->load->view('layouts/header', $data);
 		$this->load->view('contact');
+		$this->load->view('layouts/modal');
 		$this->load->view('layouts/footer');
 	}
 
@@ -84,7 +90,7 @@ Class Main extends CI_Controller {
 			$this->email->initialize($config);
 
 			$this->email->from('no-reply@finquor.com', 'FinQuor Site');
-			$this->email->to('restyjayalejo17@gmail.com');
+			$this->email->to('finquor@gmail.com');//@dminfqtm123
 			$this->email->cc('contact@finquor.com');
 			$this->email->subject($subject . ' Inquiry');
 			$this->email->message($body);

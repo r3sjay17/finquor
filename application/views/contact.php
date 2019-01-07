@@ -56,6 +56,12 @@
 										</div>
 									</div>
 
+									<div class="form-group row">
+										<div class="col-md-12">
+											<div class="g-recaptcha" data-sitekey="6LdK0HwUAAAAAP-mI0MT9aH8eHBCY8Xl37C_ZzEv"></div>
+										</div>
+									</div>
+
 									<div class="form-group row fq-btn-group">
 										<div class="col-md-12">
 											<button type="reset"><i class="fa fa-repeat"></i> Reset</button>

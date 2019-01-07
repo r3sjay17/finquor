@@ -9,7 +9,6 @@
 
 	<link rel="icon" href="<?=base_url('assets/images/logo.png')?>">
 
-	<!-- <meta name="google-signin-client_id" content="471011139323-avtmuha9addgfpklpe3tauvrfaisoila.apps.googleusercontent.com"> -->
 	<meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com">
     <script src="//apis.google.com/js/platform.js" async defer></script>
@@ -39,6 +38,9 @@
 	<script type="text/javascript">
 		var site = "<?=base_url()?>";
 	</script>
+
+	<!-- google captcha -->
+	<script src='//www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body class="fq-landing <?=$page?>-page">
@@ -101,9 +103,9 @@
 							<li class="menu-item <?=($page == 'contact') ? 'active' : '';?>">
 								<a href="<?=base_url('contact')?>">Contact Us</a>
 							</li>
-							<li class="menu-item" id="login-item">
+							<!-- <li class="menu-item" id="login-item">
 								<button type="button" class="btn-login">REGISTER</button>
-							</li>
+							</li> -->
 
 							<!-- <?php if(!isset($_SESSION['provider'])) : ?>
 							<li class="menu-item" id="login-item">

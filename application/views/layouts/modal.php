@@ -65,6 +65,7 @@
 						</button>
 						<h2>SIGN UP with</h2>
 						<form method="POST" id="frm-signup">
+							<div class="error-msg err-msg" style="display: none;"></div>
 							<div class="form-group row justify-content-md-center">
 								<div class="col-md-10">
 									<input type="email" name="email" class="form-control" placeholder="Email Address" required>
@@ -140,6 +141,10 @@
 							</div>
 
 							<div class="form-group row justify-content-md-center">
+								<div class="g-recaptcha" data-sitekey="6LdK0HwUAAAAAP-mI0MT9aH8eHBCY8Xl37C_ZzEv"></div>
+							</div>
+
+							<div class="form-group row justify-content-md-center">
 								<div class="col-md-12">
 									<button type="submit">SIGN UP</button>
 								</div>
@@ -152,7 +157,7 @@
 					By signing up, you agree to Canva's <br>
 					<a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a>
 				</div>
-				<div class="user">If you already have an account, <a href="#">LOG IN HERE.</a></div>
+				<!-- <div class="user">If you already have an account, <a href="#">LOG IN HERE.</a></div> -->
 			</div>
 
 			<div class="">

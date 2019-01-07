@@ -4,9 +4,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 Class Main extends CI_Controller {
 
+	private $gcaptcha_skey = '6LdK0HwUAAAAAHPKFIKMJ7RE-Nf90U-cvTcsi0wC';
+
 	public function __construct() {
 		parent::__construct();
-		//header('X-Frame-Options: SAMEORIGIN');
+		//$this->load->model('sql');
+
+		$config = array(
+		    'protocol' => 'smtp',
+		    'smtp_host' => 'ssl://smtp.googlemail.com',
+		    'smtp_port' => 465,
+		    'smtp_user' => 'finquor@gmail.com',
+		    'smtp_pass' => '@dminfqtm123',
+		    'mailtype'  => 'html', 
+		    'charset'   => 'iso-8859-1'
+		);
+		$this->load->library('email', $config);
 	}
 
 	public function index() {
@@ -71,34 +84,50 @@ Class Main extends CI_Controller {
 		$status = FALSE;
 		$response = '<div>Error: something went wrong!</div>';
 		if(isset($_POST)) {
-			$name = (isset($_POST['name'])) ? $_POST['name'] : '';
-			$email = (isset($_POST['email'])) ? $_POST['email'] : '';
-			$subject = (isset($_POST['subject'])) ? $_POST['subject'] : '';
-			$comment = (isset($_POST['comments'])) ? $_POST['comments'] : '';
-			
-			$body = '
-					Name: <strong>'.$name.'</strong>
-					<br>
-					Email: <strong>'.$email.'</strong>
-					<br>
-					Comment: <strong>'.$comment.'</strong>
-					';
+			if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+				//verify response from google captcha
+				$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $this->gcaptcha_skey . '&response=' . $_POST['g-recaptcha-response']);
+				$responseData = json_decode($verifyResponse);
+				if($responseData->success) {
+					$name = (isset($_POST['name'])) ? $_POST['name'] : '';
+					$email = (isset($_POST['email'])) ? $_POST['email'] : '';
+					$subject = (isset($_POST['subject'])) ? $_POST['subject'] : '';
+					$message = (isset($_POST['comments'])) ? $_POST['comments'] : '';
 
-			$this->load->library('email');
+					$data = array(
+						'name' => $name,
+						'email' => $email,
+						'subject' => $subject,
+						'message' => $message
+					);
+					
+					//if($this->sql->insertInquiry($data)) {
+						$body = '
+								Name: <strong>'.$name.'</strong>
+								<br>
+								Email: <strong>'.$email.'</strong>
+								<br>
+								Comment: <strong>'.$message.'</strong>
+								';
 
-			$config['mailtype'] = 'html';
-			$this->email->initialize($config);
+						$this->email->from('no-reply@finquor.com', 'FinQuor Site');
+						$this->email->to('restyjayalejo17@gmail.com');
+						/*$this->email->to('finquor@gmail.com');//@dminfqtm123
+						$this->email->cc('contact@finquor.com');*/
+						$this->email->subject($subject . ' Inquiry');
+						$this->email->message($body);
+						$this->email->send();
 
-			$this->email->from('no-reply@finquor.com', 'FinQuor Site');
-			$this->email->to('finquor@gmail.com');//@dminfqtm123
-			$this->email->cc('contact@finquor.com');
-			$this->email->subject($subject . ' Inquiry');
-			$this->email->message($body);
-			//$this->email->send();
-
-			$status = TRUE;
-			$response = '<div>Thank you for submitting your query,</div>
-						<div>please wait for our response within 48 hours.</div>';
+						$status = TRUE;
+						$response = '<div>Thank you for submitting your query,</div>
+									<div>please wait for our response within 48 hours.</div>';
+					//}
+				} else {
+					$response = '<div>Error: captcha verification failed. Please try again.</div>';
+				}
+			} else {
+				$response = '<div>Please click on the reCAPTCHA box.</div>';
+			}
 		}
 		echo json_encode(array(
 			'status' => $status,

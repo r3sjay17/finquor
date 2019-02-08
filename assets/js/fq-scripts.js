@@ -51,7 +51,7 @@ jQuery(function($) {
 	});
 
 	$('body').on('click', '.back-to-top', function() {
-		$("html, body").animate({scrollTop: 0}, 2500);
+		$("html, body").animate({scrollTop: 0}, 1500);
 	});
 	
 	/*$('.fq-menu .menu-item .btn-login, #get-started-modal .fq-modal-content .user a').on('click', function(e) {
@@ -116,12 +116,12 @@ jQuery(function($) {
 
 	/* pages function */
 	//home
-	/*$('.fq-header .content-wrpr .btn-get-started, .priority-row .btn-get-started, .btn-no-account, .services-page .btn-get-started, .subscription-row .fq-client, .subscription-row .fq-advisor, .fq-header #login-item .btn-login').on('click', function(e) {
+	$('.fq-header .content-wrpr .btn-get-started, .priority-row .btn-get-started, .btn-no-account, .services-page .btn-get-started, .subscription-row .fq-client, .subscription-row .fq-advisor, .fq-header #login-item .btn-login').on('click', function(e) {
 		e.preventDefault();
 		$('.login-wrapper').fadeOut(800);
 		$('.login-wrapper:before').fadeOut(800);
 		$('#get-started-modal').fadeIn(800);
-	});*/
+	});
 
 	//about
 	$('.team-wrpr .inner-hldr').slick({
@@ -193,13 +193,14 @@ jQuery(function($) {
 			$(this).find('button[type=submit]').prepend('<i class="fa fa-spinner fa-spin"></i> ');
 			$.ajax({
 				method: "POST",
-				url: site + "authenticate",
+				url: site + "actions/signup",
 				contentType: false,
 				cache: false,
 				processData: false,
 				data: formData,
 				success: function(response) {
-					var data = JSON.parse(response);
+					console.log(response)
+					/*var data = JSON.parse(response);
 					if(data.status) {
 						signuphldr.find('.main').show();
 						signuphldr.find('.sub').hide();
@@ -207,7 +208,7 @@ jQuery(function($) {
 						signuphldr.find('.sub .sub-form').hide();
 						$('#frm-signup').trigger('reset');
 						$('#get-started-modal').fadeOut(800);
-						/*$('.fq-modal.fq-alert .fq-modal-content').html('<h3>Kindly check your email for confirmation</h3>');*/
+						$('.fq-modal.fq-alert .fq-modal-content').html('<h3>Kindly check your email for confirmation</h3>');
 						$('.fq-modal.fq-alert .fq-modal-content').html('<DIV>'+ data.response +'</DIV>');
 						$('.fq-modal.fq-alert').fadeIn(800);
 					} else {
@@ -216,7 +217,7 @@ jQuery(function($) {
 						setTimeout(function() {
 							$('#frm-signup .error-msg').slideUp(800);
 						}, 3000);
-					}
+					}*/
 					grecaptcha.reset();
 					$('#frm-signup button[type=submit]').html('SIGN UP');
 				}

@@ -49,7 +49,7 @@
 							<div class="content">
 								<h2>Search for an advisor</h2>
 								<div class="desc">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum risus consequat tempor porta. Nunc lacus nibh, condimentum ac justo et, facilisis auctor libero. Aenean non quam enim. Donec condimentum dui eu ligula congue, eget euismod felis commodo. Proin sodales vitae sem vitae pretium.
+									Find a wide range of financial advisors based on your preferred location that suits your financial needs.
 								</div>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 							<div class="content">
 								<h2>Set a meeting</h2>
 								<div class="desc">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum risus consequat tempor porta. Nunc lacus nibh, condimentum ac justo et, facilisis auctor libero. Aenean non quam enim. Donec condimentum dui eu ligula congue, eget euismod felis commodo. Proin sodales vitae sem vitae pretium.
+									Talk with your chosen advisor and start to set a meeting to discuss your financial priorities.
 								</div>
 							</div>
 						</div>
@@ -73,7 +73,7 @@
 							<div class="content">
 								<h2>Engage the plan</h2>
 								<div class="desc">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum risus consequat tempor porta. Nunc lacus nibh, condimentum ac justo et, facilisis auctor libero. Aenean non quam enim. Donec condimentum dui eu ligula congue, eget euismod felis commodo. Proin sodales vitae sem vitae pretium.
+									Once you're all set, you can implement the agreed financial plan so that you can target your financial goals.
 								</div>
 							</div>
 						</div>

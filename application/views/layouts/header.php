@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
@@ -9,9 +9,9 @@
 
 	<link rel="icon" href="<?=base_url('assets/images/logo.png')?>">
 
-	<meta name="google-signin-scope" content="profile email">
+	<!-- <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com">
-    <script src="//apis.google.com/js/platform.js" async defer></script>
+    <script src="//apis.google.com/js/platform.js" async defer></script> -->
 
 	<title>FinQuor</title>
 
@@ -26,21 +26,6 @@
 	<!-- slick stylesheet -->
 	<link rel="stylesheet" href="<?=base_url('assets/css/slick.min.css')?>">
 	<link rel="stylesheet" href="<?=base_url('assets/css/slick-theme.min.css')?>">
-
-	<!-- HTTPS required. HTTP will give a 403 forbidden response -->
-	<script src="//sdk.accountkit.com/en_US/sdk.js"></script>
-
-	
-	<!-- scripts -->
-	<script src="<?=base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
-	<script src="<?=base_url('assets/js/slick.min.js')?>"></script>
-	<script src="<?=base_url('assets/js/fq-scripts.js')?>"></script>
-	<script type="text/javascript">
-		var site = "<?=base_url()?>";
-	</script>
-
-	<!-- google captcha -->
-	<script src='//www.google.com/recaptcha/api.js'></script>
 
 </head>
 <body class="fq-landing <?=$page?>-page">

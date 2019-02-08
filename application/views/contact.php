@@ -73,7 +73,7 @@
 
 							<div class="col-md-6 map-row">
 								<div class="map-hldr">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482.70853565476534!2d121.02404951459283!3d14.560952199006222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c907af9013a3%3A0x8af4a17c3d9b870d!2sFinman+Centre+Building%2F+South+Premiere!5e0!3m2!1sen!2sph!4v1537088135446" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.8341427439218!2d121.02322875735673!3d14.560952184742172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c907af9013a3%3A0x8af4a17c3d9b870d!2sFinman+Centre+Building%2F+South+Premiere!5e0!3m2!1sen!2sph!4v1547771279919" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 								</div>
 								<div class="row details-hldr">
 									<div class="col-md-6">
@@ -90,9 +90,9 @@
 											<i class="fa fa-paper-plane"></i>
 											Our Location
 										</h3>
-										<span>Lorem Ipsum Dolor Sit</span>
-										<span>Salcedo Village, Makati City</span>
-										<span>Philippines</span>
+										<span>7th Floor Finman Centre, Salcedo Village</span>
+										<span>131 Tordesillas St., Bel-Air, Makati City</span>
+										<span>NCR, 4th District, Philippines</span>
 									</div>
 								</div>
 							</div>

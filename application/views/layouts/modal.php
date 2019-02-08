@@ -64,7 +64,7 @@
 							<span>Advisor</span>
 						</button>
 						<h2>SIGN UP with</h2>
-						<form method="POST" id="frm-signup">
+						<form id="frm-signup">
 							<div class="error-msg err-msg" style="display: none;"></div>
 							<div class="form-group row justify-content-md-center">
 								<div class="col-md-10">
@@ -95,8 +95,8 @@
 											<input type="date" name="bdate" class="form-control">
 										</div>
 										<div class="col-md-5 fq-col text-left">
+											<label><input type="radio" name="gender" value="male" checked>MALE</label>
 											<label><input type="radio" name="gender" value="female">FEMALE</label>
-											<label><input type="radio" name="gender" value="male">MALE</label>
 										</div>
 									</div>
 								</div>

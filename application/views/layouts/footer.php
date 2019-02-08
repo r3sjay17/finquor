@@ -3,6 +3,26 @@
 	</div>
 	<!-- ./end body content -->
 
+
+
+	<!-- HTTPS required. HTTP will give a 403 forbidden response -->
+	<script src="//sdk.accountkit.com/en_US/sdk.js"></script>
+
+	
+	<!-- scripts -->
+	<script src="<?=base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/jquery.smooth-scroll-2.2.0.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/slick.min.js')?>"></script>
+	<script src="<?=base_url('assets/js/fq-scripts.js')?>"></script>
+	<script type="text/javascript">
+		var site = "<?=base_url()?>";
+	</script>
+
+	<!-- google captcha -->
+	<script src='//www.google.com/recaptcha/api.js'></script>
+
+	
+
 	<?php if($page != 'services') : ?>
 	<footer>
 		<div class="container">
@@ -57,10 +77,10 @@
 	</div>
 	<?php endif; ?>
 
-	<iframe id="googlelogoutframe" src="#" style="display: none"></iframe>
+	<!-- <iframe id="googlelogoutframe" src="#" style="display: none"></iframe> -->
 
 	<?php if(!isset($_SESSION['name'])) : ?>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		$(document).ready(function() {
 			// Initiate Facebook JS SDK
 			window.fbAsyncInit = function() {
@@ -116,7 +136,7 @@
 			}(document, 'script', 'facebook-jssdk'));
 
 		});
-	</script>
+	</script> -->
 	<?php endif; ?>
 
 </body>

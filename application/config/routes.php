@@ -70,3 +70,5 @@ $route['account/(:any)/error'] = 'main/accountError';
 
 /* custom */
 $route['error'] = 'main/errorpage';
+$route['privacy-policy'] = '';
+$route['terms-and-conditions'] = '';

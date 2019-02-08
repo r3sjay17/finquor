@@ -20,4 +20,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['google']['client_id'] = '471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com';
 $config['google']['client_secret'] = 'yepqNpmb9PUy_I1tIfMwTSA-';
-$config['google']['redirect_url'] = base_url('googleapi/oauth2callback');
+$config['google']['redirect_url'] = base_url('api/googleoauth2callback');

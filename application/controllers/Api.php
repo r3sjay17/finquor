@@ -2,14 +2,14 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class GoogleAPI extends CI_Controller {
+class Api extends CI_Controller {
 
 	function __construct() {
 		parent::__construct();
 		$this->load->library('google');
 	}
 
-	public function oauth2callback() {
+	public function googleoauth2callback() {
 		$gdata = $this->google->validate();
 		if(!empty($gdata['email'])) :
 			$data['page'] = "Signup";

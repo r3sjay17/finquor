@@ -31,8 +31,7 @@ class Google {
 	public function validate(){		
 		$info = array();
 		if(isset($_GET['code'])) {
-		  	//if($this->client->authenticate($_GET['code'])) {
-		  	$this->client->authenticate($_GET['code']);
+		  	if($this->client->authenticate($_GET['code'])) {
 			  	$access_token = $this->client->getAccessToken();
 
 			   	$this->client->setAccessToken($access_token);
@@ -45,9 +44,9 @@ class Google {
 				$info['lname'] = $person['name']['familyName'];
 				$info['link'] = $person['url'];
 				$info['profile_pic'] = substr($person['image']['url'],0,strpos($person['image']['url'],"?sz=50")) . '?sz=800';
-			/*} else {
+			} else {
 				redirect(base_url('error'));
-			}*/
+			}
 		}
 
 	   	return  $info;

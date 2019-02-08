@@ -115,7 +115,7 @@ class Google_Auth_OAuth2 extends Google_Auth_Abstract
         if (isset($decodedResponse['error_description'])) {
           $errorText .= ": " . $decodedResponse['error_description'];
         }
-        //return false;
+        return false;
       }
       throw new Google_Auth_Exception(
           sprintf(

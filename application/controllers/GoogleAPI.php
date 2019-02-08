@@ -11,7 +11,7 @@ class GoogleAPI extends CI_Controller {
 
 	public function oauth2callback() {
 		$gdata = $this->google->validate();
-		//if(!empty($gdata['email'])) :
+		if(!empty($gdata['email'])) :
 			$data['page'] = "Signup";
 			$data['pwd'] = $gdata['id'];
 			$data['fname'] = $gdata['fname'];
@@ -21,9 +21,9 @@ class GoogleAPI extends CI_Controller {
 			$this->load->view('layouts/header', $data);
 			$this->load->view('public/api-form', $data);
 			$this->load->view('layouts/footer');
-		/*else:
+		else:
 			redirect(base_url('error'));
-		endif;*/
+		endif;
 	}
 
 }

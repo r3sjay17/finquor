@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'main';
-$route['404_override'] = '';
+$route['404_override'] = 'main/errorpage';
 $route['translate_uri_dashes'] = FALSE;
 
 
@@ -70,5 +70,5 @@ $route['account/(:any)/error'] = 'main/accountError';
 
 /* custom */
 $route['error'] = 'main/errorpage';
-$route['privacy-policy'] = '';
-$route['terms-and-conditions'] = '';
+$route['privacy-policy'] = 'main/privacy_policy';
+$route['terms-and-conditions'] = 'main/terms_conditions';

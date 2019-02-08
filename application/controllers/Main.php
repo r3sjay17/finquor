@@ -57,6 +57,14 @@ class Main extends CI_Controller {
 		$this->load->view('layouts/footer');
 	}
 
+	public function privacy_policy() {
+		
+	}
+
+	public function terms_conditions() {
+		
+	}
+
 	public function signupType() {
 		$data['page'] = "Signup";
 		$data['google_login_url'] = $this->google->get_login_url();

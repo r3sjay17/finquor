@@ -2,102 +2,126 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-Class Main extends CI_Controller {
+class Main extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->load->library('google');
 	}
 
 	public function index() {
-		$data['page'] = "home";
+		$data['page'] = "Home";
 
 		$this->load->view('layouts/header', $data);
-		$this->load->view('index');
+		$this->load->view('public/home');
 		$this->load->view('layouts/footer');
 	}
 
 	public function about() {
-		$data['page'] = "about-us";
+		$data['page'] = "About US";
 
 		$this->load->view('layouts/header', $data);
-		$this->load->view('about');
+		$this->load->view('public/about');
 		$this->load->view('layouts/footer');
 	}
 
 	public function services() {
-		$data['page'] = "services";
-		$data['service'] = $this->uri->segment(2);
+		$data['page'] = "Services";
 
 		$this->load->view('layouts/header', $data);
-		$this->load->view('services');
+		$this->load->view('public/services');
 		$this->load->view('layouts/footer');
 	}
 
 	public function subscription() {
-		$data['page'] = "subscription";
+		$data['page'] = "Subscription";
 
 		$this->load->view('layouts/header', $data);
-		$this->load->view('subscription');
+		$this->load->view('public/subscription');
 		$this->load->view('layouts/footer');
 	}
 
 	public function contact() {
-		$data['page'] = "contact";
+		$data['page'] = "Contact";
 
 		$this->load->view('layouts/header', $data);
-		$this->load->view('contact');
+		$this->load->view('public/contact');
 		$this->load->view('layouts/footer');
 	}
 
-	public function logout() {
-		//$this->session->unset_userdata('fb_access_token');
-		$this->session->unset_userdata('provider');
-		$this->session->unset_userdata('name');
-		redirect(base_url());
+	public function signup() {
+		$data['page'] = "Signup";
+
+		$this->load->view('layouts/header', $data);
+		$this->load->view('public/signup-main');
+		$this->load->view('layouts/footer');
+	}
+
+	public function signupType() {
+		$data['page'] = "Signup";
+		$data['google_login_url'] = $this->google->get_login_url();
+		$acceptedType = array(_ADVISOR, _CLIENT);
+		$type = (!empty($this->uri->segment(2))) ? $this->uri->segment(2) : _CLIENT;
+		$data['type'] = (in_array($type, $acceptedType)) ? $type : _CLIENT;
+
+		$this->load->view('layouts/header', $data);
+		$this->load->view('public/signup-option', $data);
+		$this->load->view('layouts/footer');
+	}
+
+	public function signupForm() {
+		$data['page'] = "Signup";
+		$acceptedType = array(_ADVISOR, _CLIENT);
+		$type = (!empty($this->uri->segment(2))) ? $this->uri->segment(2) : _CLIENT;
+		$data['type'] = (in_array($type, $acceptedType)) ? $type : _CLIENT;
+
+		$this->load->view('layouts/header', $data);
+		$this->load->view('public/signup-form', $data);
+		$this->load->view('layouts/footer');
 	}
 
 	/**
-	* Send message through email
-	* @param POST 		data from post input
-	* @return mixed
-	*/
-	public function sendMessage() {
-		$status = FALSE;
-		$response = '<div>Error: something went wrong!</div>';
-		if(isset($_POST)) {
-			$name = (isset($_POST['name'])) ? $_POST['name'] : '';
-			$email = (isset($_POST['email'])) ? $_POST['email'] : '';
-			$subject = (isset($_POST['subject'])) ? $_POST['subject'] : '';
-			$comment = (isset($_POST['comments'])) ? $_POST['comments'] : '';
+	 * verified signup account from link in email
+	 * @return 
+	 */
+	public function accountVerified() {
+		$data['page'] = "Verification";
+
+		$this->load->view('public/account-verification');
+	}
+
+	/**
+	 * error verification signup account from link in email
+	 * @return 
+	 */
+	public function accountError() {
+		$data['page'] = "Verification";
+		$type = (!empty($this->uri->segment(2))) ? $this->uri->segment(2) : 'token';
+
+		switch($type) {
+			case 'expired':
+				$message = 'Verification link already expired.';
+				break;
+
+			case 'verified':
+				$message = 'Account already verified.';
+				break;
 			
-			$body = '
-					Name: <strong>'.$name.'</strong>
-					<br>
-					Email: <strong>'.$email.'</strong>
-					<br>
-					Comment: <strong>'.$comment.'</strong>
-					';
-
-			$this->load->library('email');
-
-			$config['mailtype'] = 'html';
-			$this->email->initialize($config);
-
-			$this->email->from('no-reply@finquor.com', 'FinQuor Site');
-			$this->email->to('restyjayalejo17@gmail.com');
-			$this->email->cc('contact@finquor.com');
-			$this->email->subject($subject . ' Inquiry');
-			$this->email->message($body);
-			//$this->email->send();
-
-			$status = TRUE;
-			$response = '<div>Thank you for submitting your query,</div>
-						<div>please wait for our response within 48 hours.</div>';
+			default:
+				$message = 'Invalid verification token.';
+				break;
 		}
-		echo json_encode(array(
-			'status' => $status,
-			'response' => $response
-		));
+		$data['message'] = $message;
+
+		$this->load->view('public/account-error', $data);
+	}
+
+	/**
+	 * set error page
+	 * @return
+	 */
+	public function errorpage() {
+		$this->load->view('error');
 	}
 
 }

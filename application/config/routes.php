@@ -50,18 +50,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'main';
-$route['404_override'] = '';
+$route['404_override'] = 'main/errorpage';
 $route['translate_uri_dashes'] = FALSE;
 
 
 /* Landing Page */
-$route['about'] = 'main/about';
+$route['about-us'] = 'main/about';
 $route['services'] = 'main/services';
-$route['service/(:any)'] = 'main/services';
 $route['subscription'] = 'main/subscription';
-$route['contact'] = 'main/contact';
-$route['logout'] = 'main/logout';
+$route['contact-us'] = 'main/contact';
 
-/* Backend */
-$route['authenticate'] = 'admin/authenticate/process';
-$route['admin'] = 'admin/admin';
+/* Registration */
+$route['signup'] = 'main/signup';
+$route['signup/(:any)'] = 'main/signupType';
+$route['form/(:any)/signup'] = 'main/signupForm';
+$route['account/(:any)/verify'] = 'actions/verifyAccount';
+$route['account/verified'] = 'main/accountVerified';
+$route['account/(:any)/error'] = 'main/accountError';
+
+/* custom */
+$route['error'] = 'main/errorpage';

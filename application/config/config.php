@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/finquor/';
+$config['base_url'] = _SITE_URL_;
 
 /*
 |--------------------------------------------------------------------------
@@ -223,7 +223,11 @@ $config['allow_get_array'] = TRUE;
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+if($_SERVER['SERVER_NAME'] == 'localhost') {
+	$config['log_threshold'] = 0;
+} else {
+	$config['log_threshold'] = 1;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -324,7 +328,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = hex2bin('cb5f19c4b03c5d96d086035d65abb799');
 
 /*
 |--------------------------------------------------------------------------
@@ -521,3 +525,6 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+date_default_timezone_set('Asia/Manila');

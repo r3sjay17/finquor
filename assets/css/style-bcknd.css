@@ -1,0 +1,56 @@
+html, body{
+	width: 100%;
+    height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+img{
+	width: 100%;
+}
+
+.bcknd{
+	background: #F3FDFF;
+}
+
+
+.cNav{    
+	box-shadow: 0 0 15px 0px #969696;
+    position: absolute;
+    top: 0;
+	background: #fff;
+}
+
+.cNav .logo{
+    padding: 12px;
+    padding-bottom: 50px;
+}
+
+.cNav .logo > img{
+    max-width: 100px;
+}
+
+.cNav .navigation nav > a.nav-link{
+	text-align: center;
+	color: #008080;
+}
+
+.cNav .navigation nav > a.nav-link.active,
+.cNav .navigation nav > a.nav-link:hover{
+	background: #5385FC;
+	color: #fff;
+}
+
+.cNav .navigation nav > a.nav-link > i.fa{
+    display: block;
+    font-size: 2em;
+}
+
+.fa-weblogo:before {
+    content: "";
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}

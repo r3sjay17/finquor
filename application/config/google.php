@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
@@ -16,9 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |  api_key           string   Developer key.
 |  scopes            string   Specify scopes
 */
-$config['google_client_id']        = '471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com';
-$config['google_client_secret']    = 'yepqNpmb9PUy_I1tIfMwTSA-';
-$config['google_redirect_url']     = 'http://localhost/codeigniter/user_authentication/';
-$config['google_application_name'] = 'FinQuor';
-$config['google_api_key']          = 'website-dev-api-1537885616579';
-$config['google_scopes']           = array();
+
+$config['google']['client_id'] = '471011139323-rap0mihmqg6nscouhhg2m7ve0iccd08r.apps.googleusercontent.com';
+$config['google']['client_secret'] = 'yepqNpmb9PUy_I1tIfMwTSA-';
+$config['google']['redirect_url'] = base_url('googleapi/oauth2callback');

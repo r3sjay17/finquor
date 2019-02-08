@@ -6,8 +6,16 @@
  RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
 
-<FilesMatch "\.(?i:gif|jpe?g|png|ico|css|js|swf)$">
-  	<IfModule mod_headers.c>
-    	Header set Cache-Control "max-age=172800, public, must-revalidate"
-  	</IfModule>
-</FilesMatch>
+
+#cache files
+<IfModule mode_expires.c>
+	ExpiresActive On
+	ExpiresByType image/jpg "access 1 month"
+	ExpiresByType image/jpeg "access 1 month"
+	ExpiresByType image/gif "access 1 month"
+	ExpiresByType image/png "access 1 month"
+	ExpiresByType image/x-icon "access 1 month"
+	ExpiresByType text/css "access 1 month"
+	ExpiresByType text/x-javascript "access 1 month"
+	ExpiresByDefault "access 1 month"
+</IfModule>

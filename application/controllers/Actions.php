@@ -167,9 +167,9 @@ class Actions extends CI_Controller {
 	 * @param string message 				content of the email
 	 * @return
 	 */
-	private function sendMail($subject, $message, $recipient = 'restyjayalejo17@gmail.com') {
+	private function sendMail($subject, $message, $recipient = 'gretarosario@gmail.com') {
 		if(!empty($subject) && !empty($message)) :
-			$this->email->from('no-reply@finquor.com', 'FinQuor Site');
+			$this->email->from('no-reply@finquor.com', 'FinQuor');
 			$this->email->to($recipient);
 			$this->email->subject($subject);
 			$this->email->message($message);

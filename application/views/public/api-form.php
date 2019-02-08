@@ -31,7 +31,7 @@
 								<div class="input-group-prepend">
 								  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 								</div>
-								<input type="date" name="bdate" class="form-control" placeholder="Full Name" ng-model="bdateModel" ng-required="true">
+								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" placeholder="Full Name" ng-model="bdateModel" ng-required="true">
 					  		</div>
 							<!-- error message -->
 							<p ng-show="frmAPISignup.bdate.$error.required" class="error-msg">Please enter your birthdate</p>

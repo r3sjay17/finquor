@@ -169,11 +169,11 @@ class Actions extends CI_Controller {
 	 */
 	private function sendMail($subject, $message, $recipient = 'restyjayalejo17@gmail.com') {
 		if(!empty($subject) && !empty($message)) :
-			$this->email->from('no-reply@finquor.com', 'FinQuor Registration');
+			$this->email->from('no-reply@finquor.com', 'FinQuor Site');
 			$this->email->to($recipient);
 			$this->email->subject($subject);
 			$this->email->message($message);
-			if($_SERVER['SERVER_NAME'] !== 'localhost') $this->email->send();
+			if($_SERVER['SERVER_NAME'] != 'localhost') $this->email->send();
 		endif;
 	}
 

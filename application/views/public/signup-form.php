@@ -15,7 +15,7 @@
 						  	<label for="name" class="sr-only">Email Address</label>
 						  	<input type="email" name="email" class="form-control" placeholder="Email" autocomplete="off" ng-model="emailModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?w+)*(\.\w{2,3})+$" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmSignup.email.$error.required" class="error-msg">Please enter email address</p>
+							<p ng-show="frmSignup.email.$error.required" class="error-msg">This field is required</p>
 							<p ng-show="frmSignup.email.$error.pattern" class="error-msg">Please enter a valid email address</p>
 						</div>
 					</div>
@@ -25,13 +25,13 @@
 						  	<label for="name" class="sr-only">First Name</label>
 						  	<input type="text" name="fname" class="form-control" placeholder="First Name" ng-model="fnameModel" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmSignup.fname.$error.required" class="error-msg">Please enter your first name</p>
+							<p ng-show="frmSignup.fname.$error.required" class="error-msg">This field is required</p>
 						</div>
 						<div class="col">
 						  	<label for="name" class="sr-only">Last Name</label>
 						  	<input type="text" name="lname" class="form-control" placeholder="Last Name" ng-model="lnameModel" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmSignup.lname.$error.required" class="error-msg">Please enter your last name</p>
+							<p ng-show="frmSignup.lname.$error.required" class="error-msg">This field is required</p>
 						</div>
 					</div>
 
@@ -45,7 +45,7 @@
 								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" placeholder="Full Name" ng-model="bdateModel" ng-required="true">
 					  		</div>
 							<!-- error message -->
-							<p ng-show="frmSignup.bdate.$error.required" class="error-msg">Please enter your birthdate</p>
+							<p ng-show="frmSignup.bdate.$error.required" class="error-msg">This field is required</p>
 						</div>
 						<div class="col">
 							<div class="row">
@@ -86,7 +86,7 @@
 						  	<label for="name" class="sr-only">Contact Number</label>
 						  	<input type="text" name="mobile" class="form-control"  placeholder="Contact Number" ng-model="contactModel" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmSignup.mobile.$error.required" class="error-msg">This field is required.</p>
+							<p ng-show="frmSignup.mobile.$error.required" class="error-msg">This field is required</p>
 						</div>
 					</div>
 
@@ -100,7 +100,7 @@
 								</div>
 						  	</div>
 							<!-- error message -->
-							<p ng-show="frmSignup.pwd.$error.required" class="error-msg">This field is required.</p>
+							<p ng-show="frmSignup.pwd.$error.required" class="error-msg">This field is required</p>
 							<p ng-show="frmSignup.pwd.$error.minlength" class="error-msg">Please enter at least 6 characters</p>
 							<p ng-show="frmSignup.pwd.$error.maxlength" class="error-msg">Maximum of 10 characters only</p>
 							<p ng-show="frmSignup.pwd.$error.pattern" class="error-msg">Password should be a combination of an uppercase, lowercase and alphanumeric characters</p>
@@ -113,7 +113,7 @@
 						  	<label for="name" class="sr-only">Confirm Password</label>
 						  	<input type="password" name="cpwd" class="form-control"  placeholder="Confirm Password" ng-model="cpwdModel" pattern="{{pwdModel}}" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmSignup.cpwd.$error.required" class="error-msg">This field is required.</p>
+							<p ng-show="frmSignup.cpwd.$error.required" class="error-msg">This field is required</p>
 							<p ng-show="frmSignup.cpwd.$error.pattern" class="error-msg">Password not match</p>
 						</div>
 					</div>

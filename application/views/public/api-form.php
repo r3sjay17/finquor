@@ -20,7 +20,7 @@
 						  		<option value="2">Advisor</option>
 						  	</select>
 							<!-- error message -->
-							<p ng-show="frmAPISignup.type.$error.required" class="error-msg">This field is required.</p>
+							<p ng-show="frmAPISignup.type.$error.required" class="error-msg">This field is required</p>
 						</div>
 					</div>
 
@@ -34,7 +34,7 @@
 								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" placeholder="Full Name" ng-model="bdateModel" ng-required="true">
 					  		</div>
 							<!-- error message -->
-							<p ng-show="frmAPISignup.bdate.$error.required" class="error-msg">Please enter your birthdate</p>
+							<p ng-show="frmAPISignup.bdate.$error.required" class="error-msg">This field is required</p>
 						</div>
 						<div class="col">
 							<div class="row">
@@ -73,7 +73,7 @@
 						  	<label for="name" class="sr-only">Contact Number</label>
 						  	<input type="text" name="mobile" class="form-control"  placeholder="Contact Number" ng-model="contactModel" ng-required="true">
 							<!-- error message -->
-							<p ng-show="frmAPISignup.mobile.$error.required" class="error-msg">This field is required.</p>
+							<p ng-show="frmAPISignup.mobile.$error.required" class="error-msg">This field is required</p>
 						</div>
 					</div>
 

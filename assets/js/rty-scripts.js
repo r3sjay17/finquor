@@ -7,7 +7,7 @@ jQuery(function($) {
 	/* signup form */
 	$('#frm-signup .passEye').on('click', 'button', function(e) {
 		e.preventDefault();
-		if($(this).find('.fa').hasClass('fa-eye')) {
+		if($(this).find('.fa').hasClass('fa-eye-slash')) {
 			$('#frm-signup input[name=pwd]').attr('type', 'text');
 			$(this).find('.fa').removeClass('fa-eye-slash');
 			$(this).find('.fa').addClass('fa-eye');

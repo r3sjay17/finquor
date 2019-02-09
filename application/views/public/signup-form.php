@@ -96,7 +96,7 @@
 						  	<div class="input-group mb-2">
 						  		<input type="password" name="pwd" class="form-control" ng-model="pwdModel" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" ng-minlength="6" ng-maxlength="10" ng-required="true">
 								<div class="input-group-prepend passEye">
-							  		<div class="input-group-text"><button><i class="fa fa-eye"></i></button></div>
+							  		<div class="input-group-text"><button><i class="fa fa-eye-slash"></i></button></div>
 								</div>
 						  	</div>
 							<!-- error message -->

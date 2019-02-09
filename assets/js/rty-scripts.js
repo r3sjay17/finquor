@@ -9,12 +9,12 @@ jQuery(function($) {
 		e.preventDefault();
 		if($(this).find('.fa').hasClass('fa-eye')) {
 			$('#frm-signup input[name=pwd]').attr('type', 'text');
-			$(this).find('.fa').removeClass('fa-eye');
-			$(this).find('.fa').addClass('fa-eye-slash');
+			$(this).find('.fa').removeClass('fa-eye-slash');
+			$(this).find('.fa').addClass('fa-eye');
 		} else {
 			$('#frm-signup input[name=pwd]').attr('type', 'password');
-			$(this).find('.fa').addClass('fa-eye');
-			$(this).find('.fa').removeClass('fa-eye-slash');
+			$(this).find('.fa').addClass('fa-eye-slash');
+			$(this).find('.fa').removeClass('fa-eye');
 		}
 	});
 

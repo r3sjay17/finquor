@@ -1354,6 +1354,18 @@ section.ssAdv a.email {
 	.navbar {
 		padding: 0 .5rem;
 	}
+	.navbar-toggler {
+		font-size: 20px;
+	}
+	.navbar-brand img {
+		width: 10%;
+	}
+	.compName {
+		font-size: 18px;
+	}
+	.compName span {
+		font-size: 10px;
+	}
 	section.sOne .row,
 	section.sTwo .row,
 	section.sThree form > .row,

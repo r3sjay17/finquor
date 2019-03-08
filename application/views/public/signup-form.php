@@ -101,7 +101,8 @@
 						  	</div>
 							<!-- error message -->
 							<p ng-show="frmSignup.pwd.$error.required" class="error-msg">This field is required</p>
-							<p ng-show="frmSignup.pwd.$error.minlength" class="error-msg">Please enter at least 6 characters</p>
+							<p ng-show="frmSignup.pwd.$error.minlength" 
+							class="error-msg">Please enter at least 6 characters</p>
 							<p ng-show="frmSignup.pwd.$error.maxlength" class="error-msg">Maximum of 10 characters only</p>
 							<p ng-show="frmSignup.pwd.$error.pattern" class="error-msg">Password should be a combination of an uppercase, lowercase and alphanumeric characters</p>
 						  

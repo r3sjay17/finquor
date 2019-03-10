@@ -10,7 +10,7 @@
 			<a href="<?=$google_login_url?>" class="btn google">Sign Up with Google</a>
 			<!-- <button class="btn facebook">Sign Up with Facebook</button>
 			<button class="btn google">Sign Up with Google</button> -->
-			<div class="terms">By Signing up, you agree to Canva's <br><a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></div>
+			<div class="terms">By Signing up, you agree to Canva's <br><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms of Use</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></div>
 			<!-- <h4><i>If you already have an account, <a href="">LOG IN HERE</a></i></h4> -->
 		</div>
 	</div>

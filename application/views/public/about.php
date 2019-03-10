@@ -74,8 +74,8 @@
 			  		<div class="col">
 			  			<div class="sliderContent">
 			  				<h2>Don-Don Adolfo G. Crisostomo</h2>
-				  			<h3>Chief Executive Officer, Founders</h3>
-				  			<p>A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, <a href="#">READ MORE</a></p>
+				  			<h3>Chief Executive Officer, Founder</h3>
+				  			<p>A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, <a href="#" data-toggle="modal" data-target="#memberDon">READ MORE</a></p>
 			  			</div>
 			  			
 			  		</div>
@@ -89,23 +89,8 @@
 			  		<div class="col">
 			  			<div class="sliderContent">
 			  				<h2>Don-Don Adolfo G. Crisostomo</h2>
-				  			<h3>Chief Executive Officer, Founders</h3>
-				  			<p>A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, <a href="#">READ MORE</a></p>
-			  			</div>
-			  			
-			  		</div>
-			  	</div>
-			  </div>
-			  <div>
-			  	<div class="row">
-			  		<div class="col-sm-4">
-			  			<img src="<?=base_url('assets/img/don.png')?>" />
-			  		</div>
-			  		<div class="col">
-			  			<div class="sliderContent">
-			  				<h2>Don-Don Adolfo G. Crisostomo</h2>
-				  			<h3>Chief Executive Officer, Founders</h3>
-				  			<p>A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, <a href="#">READ MORE</a></p>
+				  			<h3>Chief Executive Officer, Founder</h3>
+				  			<p>A multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, <a href="#" data-toggle="modal" data-target="#memberDon">READ MORE</a></p>
 			  			</div>
 			  			
 			  		</div>
@@ -116,6 +101,39 @@
 		
 	</div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade modalTeam" id="memberDon" tabindex="-1" role="dialog" aria-labelledby="investmentsLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="fa fa-times-circle"></i>
+				</button>
+			</div>
+
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm-5">
+						<img src="<?=base_url('assets/img/don.png')?>" />
+					</div>
+
+					<div class="col-sm-7">
+						<h3>Don-Don Adolfo G. Crisostomo</h3>
+						<h4>Chief Executive Officer, Founder</h4>
+						<p>
+							Don-Don Adolfo G. Crisostomo is a multi-awarded Financial Planner, and beyond doubt, a man of passion and worthy of emulation. He is also an entrepreneur, professor, business consultant, speaker, columnist, author, and financial analyst.
+						</p>
+						<p>
+							He holds many local and international professional licenses and certifications in finance, business, and accounting as a Registered Financial Planner, Certified Book Keeper accredited in the UK, Registered Cost Accountant in Australia, Certified Accounting Technician of Canada, Certified Six Sigma Yellow Belter, Registered Business Professional and Certified Tax Technician. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function(){

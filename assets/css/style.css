@@ -1145,6 +1145,55 @@ section.ssAdv a.email {
     border-top: 10px solid #13bb2f;
 }
 
+#termsConditionsModal .modal-header {
+	border: none;
+	text-align: center;
+	display: block;
+	position: relative;
+}
+#termsConditionsModal .modal-header .close {
+	position: absolute;
+    top: 15%;
+    right: 3%;
+	font-size: 30px;
+}
+#termsConditionsModal .modal-body {
+	padding: 3rem;
+	text-align: justify;
+}
+#termsConditionsModal .modal-body .tabindent {
+	margin-left: 5%;
+	margin-bottom: 0;
+}
+
+/* team modal */
+.modalTeam .modal-dialog {
+	max-width: 90%;
+}
+.modalTeam .modal-header {
+	border: 0;
+	padding: 10px;
+}
+.modalTeam .modal-header .close {
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    font-size: 30px;
+}
+.modalTeam .modal-body {
+	padding: 2.5rem;
+}
+.modalTeam .modal-body h3,
+.modalTeam .modal-body h4 {
+	text-align: center;
+	font-weight: 700;
+}
+.modalTeam .modal-body p {
+	text-align: justify;
+}
+
+
+
 
 
 /* responsive */

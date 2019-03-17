@@ -246,6 +246,7 @@
 								Variable Universal Life Insurance (often shortened to VUL) or in other terms, Unit Linked Insurance is a type of life insurance that builds fund or cash value. VUL is more likely a life insurance and mutual funds combined into one policy. The name variable component refers on your capability to invest in different accounts whose values vary – it varies because the company is investing the money in different fund types, from bond markets up to stock markets or equity that can cater your medium-to-long term goals, educational needs of your children and retirement.
 								<br>
 								Your Advisor can help you assess yourself on how conservative you are in investing your money.  Please don’t forget that the older you get, the lesser time you can save for rainy days; time is your friend.
+								<br>
 								At FINQUOR™, we can help you connect to an advisor that can assist you to address your future needs. Take that leap and connect with us today!
 								<br><br>
 								<strong>NON-LIFE INSURANCE</strong>

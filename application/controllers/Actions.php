@@ -11,7 +11,7 @@ class Actions extends CI_Controller {
 
 		$config = array(
 			'mailtype' => 'html',
-			'charset' => 'iso-8859-1'
+			'charset' => 'utf-8'
 		);
 		$this->load->library('email', $config);
 		$this->load->model('query');
@@ -171,7 +171,7 @@ class Actions extends CI_Controller {
 		if(!empty($subject) && !empty($message)) :
 			$this->email->from('no-reply@finquor.com', 'FinQuor');
 			$this->email->to($recipient);
-			$this->email->cc('gretarosario@gmail.com, finquor@gmail.com');
+			//$this->email->cc('gretarosario@gmail.com, finquor@gmail.com');
 			$this->email->subject($subject);
 			$this->email->message($message);
 			if($_SERVER['SERVER_NAME'] != 'localhost') $this->email->send();

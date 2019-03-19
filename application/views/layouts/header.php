@@ -51,6 +51,7 @@
 					<a class="nav-item nav-link <?=($page == 'Services') ? 'active' : ''?>" href="<?=base_url('services')?>">Services</a>
 					<a class="nav-item nav-link <?=($page == 'Subscription') ? 'active' : ''?>" href="<?=base_url('subscription')?>">Subscription</a>
 					<a class="nav-item nav-link <?=($page == 'Contact') ? 'active' : ''?>" href="<?=base_url('contact-us')?>">Contact Us</a>
+					<a class="nav-item nav-link btn-register" href="#"><span>REGISTER</span></a>
 
 					<!-- <div class="nav-item dropdown">
 						<a class="nav-link btn-nav dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -2,7 +2,7 @@
 
 <section class="sTwo srv-sOne">
 	<div class="wrapper">
-		<h1>What is your financial priority?</h1>
+		<h2 style="font-family: 'Montserrat', sans-serif;font-weight: 700;color: #008080;">What is your financial priority?</h2>
 		<div class="row">
 			<div class="col">
 				<a href="#"  data-toggle="modal" data-target="#investments">
@@ -214,6 +214,6 @@
 				</div>
 			</div>
 		</div>
-		<a href="<?=base_url('signup')?>" class="btn btn-theme">Get Started</a>
+		<a href="<?=base_url('signup')?>" class="btn btn-theme3">Get Started</a>
 	</div>
 </section>

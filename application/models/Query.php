@@ -31,7 +31,7 @@ class Query extends CI_Model{
 	 * @return mixed
 	 */
 	public function saveSignup($param) {
-		$query = "INSERT INTO signups (SignUpType, FirstName, LastName, EmailAddress, MobileNumber, Gender, BirthDate, SignUpPassword, SignUpStatus, CreatedBy, CreatedDate) VALUES (:stype, :fname, :lname, :email, :mobile, :gender, :bdate, :pwd, :status, :creator, :created)";
+		$query = "INSERT INTO signups (SignUpType, FirstName, LastName, EmailAddress, Gender, BirthDate, SignUpStatus, CreatedBy, CreatedDate) VALUES (:stype, :fname, :lname, :email, :gender, :bdate, :status, :creator, :created)";
 
 		$insert = $this->conn->query($query, $param);
 

@@ -3,9 +3,8 @@
 <section class="sgnUp sgnAdv">
 	<div class="wrapper">
 		<div class="cont">
-			<h1>SIGN UP as</h1>
-			<a href="<?=base_url('signup/' . $type)?>" class="btn btn-theme2"><?=strtoupper($type)?></a>
-			<h1>SIGN UP with</h1>
+			<p style="font-family: 'Montserrat', sans-serif;font-size: 18px;font-weight: 700;">REGISTER as</p>
+			<a href="<?=base_url('signup')?>" class="btn btn-theme2"><?=strtoupper($type)?></a>
 
 			<div ng-app="appSignup" ng-controller="signupCtrl">
 				<form id="frm-signup" name="frmSignup" novalidate>
@@ -81,44 +80,6 @@
 						</div>
 					<?php endif; ?>
 
-					<div class="row">
-						<div class="col">
-						  	<label for="name" class="sr-only">Contact Number</label>
-						  	<input type="text" name="mobile" class="form-control"  placeholder="Contact Number" ng-model="contactModel" ng-required="true">
-							<!-- error message -->
-							<p ng-show="frmSignup.mobile.$error.required" class="error-msg">This field is required</p>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col">
-						  	<label for="name" class="sr-only">Password</label>
-						  	<div class="input-group mb-2">
-						  		<input type="password" name="pwd" class="form-control" ng-model="pwdModel" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" ng-minlength="6" ng-maxlength="10" ng-required="true">
-								<div class="input-group-prepend passEye">
-							  		<div class="input-group-text"><button><i class="fa fa-eye-slash"></i></button></div>
-								</div>
-						  	</div>
-							<!-- error message -->
-							<p ng-show="frmSignup.pwd.$error.required" class="error-msg">This field is required</p>
-							<p ng-show="frmSignup.pwd.$error.minlength" 
-							class="error-msg">Please enter at least 6 characters</p>
-							<p ng-show="frmSignup.pwd.$error.maxlength" class="error-msg">Maximum of 10 characters only</p>
-							<p ng-show="frmSignup.pwd.$error.pattern" class="error-msg">Password should be a combination of an uppercase, lowercase and alphanumeric characters</p>
-						  
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col">
-						  	<label for="name" class="sr-only">Confirm Password</label>
-						  	<input type="password" name="cpwd" class="form-control"  placeholder="Confirm Password" ng-model="cpwdModel" pattern="{{pwdModel}}" ng-required="true">
-							<!-- error message -->
-							<p ng-show="frmSignup.cpwd.$error.required" class="error-msg">This field is required</p>
-							<p ng-show="frmSignup.cpwd.$error.pattern" class="error-msg">Password not match</p>
-						</div>
-					</div>
-
 
 					<div class="row">
 						<div class="col-md-12">
@@ -128,10 +89,15 @@
 
 					<div class="row">
 						<div class="col">
-							<button type="submit" class="btn btn-theme" ng-disabled="frmSignup.email.$invalid || frmSignup.fname.$invalid || frmSignup.lname.$invalid || frmSignup.bdate.$invalid || frmSignup.mobile.$invalid || frmSignup.pwd.$invalid || frmSignup.cpwd.$invalid">SIGNUP</button>
+							<button type="submit" class="btn btn-theme3" ng-disabled="frmSignup.email.$invalid || frmSignup.fname.$invalid || frmSignup.lname.$invalid || frmSignup.bdate.$invalid" style="font-size: 23px;padding: 0 5%;margin-top: 3%">REGISTER</button>
 						</div>
 					</div>
 				</form>
+
+				<p style="font-weight: 700">or</p>
+
+				<a href="<?=$google_login_url?>" class="btn btn-google">REGISTER with Google</a>
+
 			</div>
 
 			<div class="terms">By Signing up, you agree to Canva's <br><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms of Use</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></div>

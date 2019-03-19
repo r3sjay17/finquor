@@ -2,6 +2,8 @@
 
 		<footer>
 			<div class="wrapper">
+
+				<?php if($page == 'Home') : ?>
 				<div class="row">
 					<div class="col">
 						<h5>Services</h5>
@@ -28,6 +30,7 @@
 					</div>
 
 				</div>
+				<?php endif; ?>
 
 				<div class="row">
 					<div class="col">

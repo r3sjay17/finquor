@@ -295,7 +295,7 @@ section.sThree form > .row{
 }
 
 footer{
-	background-color: #001516;
+	background-color: #077575;
 	color: #fff;
     padding: 2vw 17vw;
     font-family: "Montserrat", sans-serif;
@@ -1124,7 +1124,7 @@ section.sgnUp .wrapper {
 }
 section.sgnUp .cont a.btn.btn-theme2 {
     display: block;
-    margin: 10px auto;
+    margin: 10px auto 3%;
     color: #fff;
     width: 50%;
     text-decoration: none;
@@ -1229,6 +1229,38 @@ section.ssAdv a.email {
     font-size: 25px;
     border-radius: 0;
     border: none;
+}
+.btn-google {
+    background: rgb(212,72,55);
+    border: 0;
+    color: #fff !important;
+    position: relative;
+    display: block;
+    font-weight: 400;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    text-decoration: none !important;
+    border-radius: 15px;
+}
+.btn-google:before {
+    content: "\f1a0";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font-weight: bold;
+    position: absolute;
+    left: 15px;
+    top: 5px;
+    font-size: 2rem;
+}
+.form-control,
+.input-group-text {
+	border-color: #5d5959;
 }
 
 

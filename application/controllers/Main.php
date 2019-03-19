@@ -79,6 +79,7 @@ class Main extends CI_Controller {
 
 	public function signupForm() {
 		$data['page'] = "Signup";
+		$data['google_login_url'] = $this->google->get_login_url();
 		$acceptedType = array(_ADVISOR, _CLIENT);
 		$type = (!empty($this->uri->segment(2))) ? $this->uri->segment(2) : _CLIENT;
 		$data['type'] = (in_array($type, $acceptedType)) ? $type : _CLIENT;

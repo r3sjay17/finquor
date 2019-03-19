@@ -28,12 +28,12 @@ class Actions extends CI_Controller {
 				if($responseData->success) {
 					$type = (isset($_POST['type'])) ? $this->query->clean($_POST['type']) : '';
 					$email = (isset($_POST['email'])) ? $this->query->clean($_POST['email']) : '';
-					$mobile = (isset($_POST['mobile'])) ? $this->query->clean($_POST['mobile']) : '';
+					//$mobile = (isset($_POST['mobile'])) ? $this->query->clean($_POST['mobile']) : '';
 					$fname = (isset($_POST['fname'])) ? $this->query->clean($_POST['fname']) : '';
 					$lname = (isset($_POST['lname'])) ? $this->query->clean($_POST['lname']) : '';
 					$bdate = (isset($_POST['bdate'])) ? $this->query->clean($_POST['bdate']) : '';
 					$gender = (isset($_POST['gender'])) ? $this->query->clean($_POST['gender']) : 0;
-					$pwd = (isset($_POST['pwd'])) ? $this->query->clean($_POST['pwd']) : '';
+					//$pwd = (isset($_POST['pwd'])) ? $this->query->clean($_POST['pwd']) : '';
 
 					if(!$this->query->checkEmail($email)) {
 						$stype = ($type == _CLIENT) ? 1 : 2;
@@ -43,10 +43,10 @@ class Actions extends CI_Controller {
 							':fname' => $fname,
 							':lname' => $lname,
 							':email' => $email,
-							':mobile' => $mobile,
+							//':mobile' => $mobile,
 							':bdate' => $bdate,
 							':gender' => $gender,
-							':pwd' => $password,
+							//':pwd' => $password,
 							':status' => 1,
 							':creator' => $fname . ' ' . $lname,
 							':created' => date('Y-m-d H:i:s')

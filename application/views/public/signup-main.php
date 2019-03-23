@@ -3,12 +3,19 @@
 <section class="sgnUp sgnOne">
 	<div class="wrapper">
 		<div class="cont">
-			<h4>You are on the right track,</h4>
-			<h1>SIGN UP as</h1>
-			<a href="<?=base_url('form/advisor/signup')?>" class="btn btn-theme2">Advisor</a>
-			<a href="<?=base_url('form/client/signup')?>" class="btn btn-theme2">Client</a>
-			<div class="terms">By Signing up, you agree to Canva's <br><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms of Use</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></div>
-			<!-- <h4><i>If you already have an account, <a href="">LOG IN HERE</a></i></h4> -->
+			
+			<h2><b>SIGN UP</b> as</h2>
+			<div class="hreg-btn hreg-advisor">
+				<i class="fa fa-user"></i> <a href="<?=base_url('form/advisor/signup')?>" class="btn btn-theme2">Advisor</a>
+			</div>
+			<div class="hreg-btn hreg-client">
+				<i class="fa fa-user"></i> <a href="<?=base_url('form/client/signup')?>" class="btn btn-theme2">Client</a>
+			</div>
+			<div class="fineprint">
+				<p>Once you registered, you agree to Finquor's</p>
+			<p><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms & Conditions</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></p>
+			</div>
+
 		</div>
 		
 	</div>

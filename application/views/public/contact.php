@@ -6,34 +6,35 @@
 		<div class="row">
 			<div class="col" ng-app="appContact" ng-controller="contactCtrl">
 				<p>*required</p>
-				<form id="frm-contact" name="frmContact" class="frm-inquiry" novalidate>
+				<form id="frm-contact" name="frmContact" class="frm-inquiry">
 				  	<div class="row">
 						<div class="col">
-					  		<label for="name">Name*</label>
 						  	<div class="input-group mb-2">
+					  			<label for="name">Name*</label>
 								<div class="input-group-prepend">
 							  		<div class="input-group-text"><i class="fa fa-user"></i></div>
 								</div>
-								<input type="text" class="form-control" name="name" placeholder="Full Name" ng-model="nameModel" ng-required="true" style="border-color: #f00">
+								<input type="text" class="form-control" name="name" placeholder="Full Name" nrequired>
 						  	</div>
 						</div>
+				  	</div>
+
+				  	<div class="row">
 						<div class="col">
-						  	<label for="email">Email*</label>
 						  	<div class="input-group mb-2">
+						  		<label for="email">Email*</label>
 								<div class="input-group-prepend">
 							  		<div class="input-group-text"><i class="fa fa-envelope"></i></div>
 								</div>
-								<input type="email" class="form-control" name="email" placeholder="Email" autocomplete="off" ng-model="emailModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?w+)*(\.\w{2,3})+$" ng-required="true" style="border-color: #f00">
+								<input type="email" class="form-control" name="email" placeholder="Email" autocomplete="off" required>
 						  	</div>
-							<!-- error message -->
-							<p ng-show="frmContact.email.$error.pattern" class="error-msg">Please enter a valid email address</p>
 						</div>
 				  	</div>
 
 				  	<div class="row">
 						<div class="col">
 							<label for="inquiry">Subject of Inquiry</label>
-							<select name="inquiry" class="form-control">
+							<select name="inquiry" class="form-control" style="display: inline-block;width: auto;">
 								<option value="services">Services</option>
 								<option value="subscription">Subscription</option>
 								<option value="signup">Signing Up</option>
@@ -59,8 +60,8 @@
 
 				  	<div class="row">
 						<div class="col">
-							<button type="reset" class="btn btn-theme"><i class="fa fa-repeat"></i> Reset</button>
-							<button type="submit" class="btn btn-theme" ng-disabled="frmContact.name.$invalid || frmContact.email.$invalid">Submit <i class="fa fa-chevron-right"></i></button>
+							<button type="reset" class="btn btn-theme btn-reset"><i class="fa fa-repeat"></i> Reset</button>
+							<button type="submit" class="btn btn-theme">Submit <i class="fa fa-chevron-right"></i></button>
 						</div>
 				  	</div>
 				</form>
@@ -85,8 +86,8 @@
 	<!-- Modal -->
 	<div class="modal fade" id="submit" tabindex="-1" role="dialog" aria-labelledby="submitLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
+			<div class="modal-content" style="border: 3px solid #fb8320">
+				<div class="modal-body" style="font-size: 20px;font-weight: 700;text-align: center;padding: 2rem;">
 					Thank you for submitting your query,
 					please wait for our response within 48 hours.
 				</div>
@@ -94,7 +95,3 @@
 	  	</div>
 	</div>
 </section>
-
-<script type="text/javascript">
-	angular.module('appContact', []).controller('contactCtrl', function() {})
-</script>

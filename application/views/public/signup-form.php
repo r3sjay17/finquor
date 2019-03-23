@@ -1,36 +1,29 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
-<section class="sgnUp sgnAdv">
+<section class="sgnUp sgnAdv sgnFrm">
 	<div class="wrapper">
-		<div class="cont">
-			<p style="font-family: 'Montserrat', sans-serif;font-size: 18px;font-weight: 700;">REGISTER as</p>
-			<a href="<?=base_url('signup')?>" class="btn btn-theme2"><?=strtoupper($type)?></a>
+		<div class="cont <?=$type?>">
+			<p style="font-family: 'Montserrat', sans-serif;font-size: 18px;font-weight: 700;">SIGN UP as</p>
+			<a href="<?=base_url('signup')?>" class="btn btn-theme2"><?=$type?></a>
 
 			<div ng-app="appSignup" ng-controller="signupCtrl">
-				<form id="frm-signup" name="frmSignup" novalidate>
+				<form id="frm-signup" name="frmSignup">
 					<input type="hidden" name="type" value="<?=$type?>">
 					<div class="row">
 						<div class="col">
 						  	<label for="name" class="sr-only">Email Address</label>
-						  	<input type="email" name="email" class="form-control" placeholder="Email" autocomplete="off" ng-model="emailModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?w+)*(\.\w{2,3})+$" ng-required="true">
-							<!-- error message -->
-							<p ng-show="frmSignup.email.$error.required" class="error-msg">This field is required</p>
-							<p ng-show="frmSignup.email.$error.pattern" class="error-msg">Please enter a valid email address</p>
+						  	<input type="email" name="email" class="form-control" placeholder="Email" autocomplete="off" required>
 						</div>
 					</div>
 					
 					<div class="row">
 						<div class="col">
 						  	<label for="name" class="sr-only">First Name</label>
-						  	<input type="text" name="fname" class="form-control" placeholder="First Name" ng-model="fnameModel" ng-required="true">
-							<!-- error message -->
-							<p ng-show="frmSignup.fname.$error.required" class="error-msg">This field is required</p>
+						  	<input type="text" name="fname" class="form-control" placeholder="First Name" required>
 						</div>
 						<div class="col">
 						  	<label for="name" class="sr-only">Last Name</label>
-						  	<input type="text" name="lname" class="form-control" placeholder="Last Name" ng-model="lnameModel" ng-required="true">
-							<!-- error message -->
-							<p ng-show="frmSignup.lname.$error.required" class="error-msg">This field is required</p>
+						  	<input type="text" name="lname" class="form-control" placeholder="Last Name" required>
 						</div>
 					</div>
 
@@ -41,10 +34,8 @@
 								<div class="input-group-prepend">
 								  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 								</div>
-								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" placeholder="Full Name" ng-model="bdateModel" ng-required="true">
+								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" placeholder="Full Name" required>
 					  		</div>
-							<!-- error message -->
-							<p ng-show="frmSignup.bdate.$error.required" class="error-msg">This field is required</p>
 						</div>
 						<div class="col">
 							<div class="row">
@@ -69,8 +60,18 @@
 							<div class="col-4">
 								<label for="name" class="sr-only">Select</label>
 								<select id="inquiry" class="form-control">
-									<option>Investments</option>
-									<option>...</option>
+									<option value="Investments - Stock Market">Investments - Stock Market</option>
+									<option value="Investments - Mutual Fund">Investments - Mutual Fund</option>
+									<option value="Investments - UITF">Investments - UITF</option>
+									<option value="Investments - ForEx">Investments - ForEx</option>
+									<option value="Investments - Real Estate">Investments - Real Estate</option>
+									<option value="Financial Services- Tax Compliance Services">Financial Services- Tax Compliance Services</option>
+									<option value="Financial Services - Accounting Services">Financial Services - Accounting Services</option>
+									<option value="Financial Services - Credit Card Services">Financial Services - Credit Card Services</option>
+									<option value="Business Opportunities">Business Opportunities</option>
+									<option value="Healthcare and Insurance - Variable Universal Life Insurance (VUL)">Healthcare and Insurance - Variable Universal Life Insurance (VUL)</option>
+									<option value="Healthcare and Insurance - Non-Life Insurance">Healthcare and Insurance - Non-Life Insurance</option>
+									<option value="Healthcare and Insurance - Healthcare Maintenance Organization">Healthcare and Insurance - Healthcare Maintenance Organization</option>
 								</select>
 							</div>
 							<div class="col">
@@ -89,7 +90,7 @@
 
 					<div class="row">
 						<div class="col">
-							<button type="submit" class="btn btn-theme3" ng-disabled="frmSignup.email.$invalid || frmSignup.fname.$invalid || frmSignup.lname.$invalid || frmSignup.bdate.$invalid" style="font-size: 23px;padding: 0 5%;margin-top: 3%">REGISTER</button>
+							<button type="submit" class="btn btn-theme3" style="font-size: 23px;padding: 0 5%;margin-top: 3%">REGISTER</button>
 						</div>
 					</div>
 				</form>
@@ -105,7 +106,3 @@
 		</div>
 	</div>
 </section>
-
-<script type="text/javascript">
-	angular.module('appSignup', []).controller('signupCtrl', function() {})
-</script>

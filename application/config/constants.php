@@ -88,7 +88,7 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 if($_SERVER['SERVER_NAME'] == 'localhost') {
 	define('_SITE_URL_', 'http://localhost/finquor/');
 } else {
-	define('_SITE_URL_', 'http://finquor.com/');
+	define('_SITE_URL_', 'http://www.finquor.com/');
 }
 
 

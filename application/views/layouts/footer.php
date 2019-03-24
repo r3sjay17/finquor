@@ -55,7 +55,7 @@
 	</div> <!-- ./ main div -->
 
 	<!--Modal-->
-	<div class="modal fade" id="popupalert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+	<div class="modal fade" id="signupalert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
 	  	<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
@@ -65,6 +65,34 @@
 					<p style="text-align: center;font-size: 20px;font-weight: 700;color: #000; margin-top: 1rem;margin-bottom: 0;">Thank you for the registration.</p>
 					<p style="text-align: center;font-size: 20px;font-weight: 700;color: #000;margin-bottom: 0;">We will update you on your email once we are live.</p>
 					<p style="text-align: center;font-size: 20px;font-weight: 700;color: #077575;">#FinQuor</p>
+				</div>
+			</div>
+	  	</div>
+	</div>
+
+	<!--Modal-->
+	<div class="modal fade" id="contactalert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  		<i class="fa fa-times-circle"></i>
+					</button>
+					<p style="text-align: center;font-size: 20px;font-weight: 700;color: #000; margin-top: 1rem;margin-bottom: 0;"></p>
+				</div>
+			</div>
+	  	</div>
+	</div>
+
+	<!--Modal-->
+	<div class="modal fade" id="erroralert" tabindex="-1" role="dialog" aria-labelledby="alertLabel" aria-hidden="true">
+	  	<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  		<i class="fa fa-times-circle"></i>
+					</button>
+					<p style="text-align: center;font-size: 20px;font-weight: 700;color: #000; margin-top: 1rem;margin-bottom: 0;"></p>
 				</div>
 			</div>
 	  	</div>

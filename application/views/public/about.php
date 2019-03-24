@@ -38,16 +38,18 @@
 					<div class="item">
 						<div>
 							<h2>Self Awareness</h2>
-							<!-- <div class="cont">We believe that self-awareness is the first step in creating a path to your future. Having awareness creates the opportunity to make changes in behavior and beliefs. Self-awareness is one of the atttributes of Emotional Intelligence and an important factor in achieving success.</div> -->
 						</div>
+
+						<div class="cont">We believe that self-awareness is the first step in creating a path to your future. Having awareness creates the opportunity to make changes in behavior and beliefs. Self-awareness is one of the atttributes of Emotional Intelligence and an important factor in achieving success.</div>
 					</div>
 				</div>
 				<div class="col">
 					<div class="item">
 						<div>
 							<h2>Commitment to Service</h2>
-							<!-- <div class="cont">As we are bridging the gap between clients and financial advisors, we are consequently building a relationship that is based on trust. We highly uphold this trust and commit to providing our clients with the service to the highest standards.</div> -->
 						</div>
+
+						<div class="cont">As we are bridging the gap between clients and financial advisors, we are consequently building a relationship that is based on trust. We highly uphold this trust and commit to providing our clients with the service to the highest standards.</div>
 					</div>
 					
 				</div>
@@ -57,8 +59,9 @@
 					<div class="item">
 						<div>
 							<h2>Independence</h2>
-							<!-- <div class="cont">We beleive that true independence offers a wide array of choices projected to benefit our clients. Your choice of an independent financial advisor is the first step in getting unbiased recommendations and impartial guidance based directly on your needs and goals.</div> -->
 						</div>
+
+						<div class="cont">We beleive that true independence offers a wide array of choices projected to benefit our clients. Your choice of an independent financial advisor is the first step in getting unbiased recommendations and impartial guidance based directly on your needs and goals.</div>
 					</div>
 					
 				</div>
@@ -66,8 +69,9 @@
 					<div class="item">
 						<div>
 							<h2>Integrity</h2>
-							<!-- <div class="cont">We promote a community in which the safety, integrity and dignity of each individual is highly regarded. We augment this value to all of our business activities, including dealings with our fellow financial professionals and to our clients.</div> -->
 						</div>
+
+						<div class="cont">We promote a community in which the safety, integrity and dignity of each individual is highly regarded. We augment this value to all of our business activities, including dealings with our fellow financial professionals and to our clients.</div>
 					</div>
 				</div>
 			</div>

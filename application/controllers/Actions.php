@@ -37,7 +37,7 @@ class Actions extends CI_Controller {
 
 					if(!$this->query->checkEmail($email)) {
 						$stype = ($type == _CLIENT) ? 1 : 2;
-						$password = $this->encryption->encrypt($pwd);
+						//$password = $this->encryption->encrypt($pwd);
 						$param = array(
 							':stype' => $stype,
 							':fname' => $fname,

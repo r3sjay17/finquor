@@ -31,7 +31,7 @@
 		<div class="row sponsor">
 			<div class="col">
 				<span>Powered By:</span>
-				<img src="<?=base_url('assets/img/Paypal.png')?>">
+				<img src="<?=base_url('assets/img/PayPal.png')?>">
 				<img src="<?=base_url('assets/img/GCash.png')?>">
 				<img src="<?=base_url('assets/img/dragonpay.png')?>">
 			</div>

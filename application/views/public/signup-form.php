@@ -90,14 +90,14 @@
 
 					<div class="row">
 						<div class="col">
-							<button type="submit" class="btn btn-theme3" style="font-size: 23px;padding: 0 5%;margin-top: 3%">REGISTER</button>
+							<button type="submit" class="btn btn-theme3" style="font-size: 23px;padding: 0 5%;margin-top: 3%">SIGN UP</button>
 						</div>
 					</div>
 				</form>
 
 				<p style="font-weight: 700">or</p>
 
-				<a href="<?=$google_login_url?>" class="btn btn-google">REGISTER with Google</a>
+				<a href="<?=$google_login_url?>" class="btn btn-google">SIGN UP with Google</a>
 
 			</div>
 

@@ -6,6 +6,8 @@
  RewriteRule ^(.*)$ index.php/$1 [L]
 </IfModule>
 
+#Disable directory browsing
+Options All -Indexes
 
 #cache files
 <IfModule mode_expires.c>
@@ -19,3 +21,15 @@
 	ExpiresByType text/x-javascript "access 1 month"
 	ExpiresByDefault "access 1 month"
 </IfModule>
+
+#Prevent access to files
+<FilesMatch "\.(htaccess|htpasswd|ini|git|gitignore)$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+#Redirect to a Secure https connection
+RewriteCond %{HTTP_HOST} !=localhost    
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]{3}$
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

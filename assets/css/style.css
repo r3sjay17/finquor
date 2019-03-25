@@ -1801,6 +1801,10 @@ section.sOne .item .img-wrapper img {
 	    line-height: 17px;
 	    height: 100% !important;
 	}
+	.modalTeam .modal-dialog {
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
 @media screen and (max-width:599px) {

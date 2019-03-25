@@ -31,5 +31,7 @@ Options All -Indexes
 #Redirect to a Secure https connection
 RewriteCond %{HTTP_HOST} !=localhost    
 RewriteCond %{HTTPS} !=on
-RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]{3}$
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+#RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]{3}$
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

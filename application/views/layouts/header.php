@@ -24,7 +24,6 @@
 	<link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
 
 	<!-- script files -->
-	<script src="<?=base_url('assets/js/angular.min.js'); ?>"></script>
 	<script src="<?=base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/slick.js')?>"></script>
@@ -90,7 +89,7 @@
 			<a href="#" class="sm-fb"><i class="fa fa-facebook-square"></i></a>
 			<a href="#" class="sm-twitter"><i class="fa fa-twitter-square"></i></a>
 			<a href="#" class="sm-instagram"><i class="fa fa-instagram"></i></a>
-			<a href="#" class="sm-mail"><i class="fa fa-envelope-o"></i></a>
+			<a href="mailto: finquor@gmail.com" class="sm-mail"><i class="fa fa-envelope-o"></i></a>
 			<p>SHARE</p>
 		</div>
 		<?php endif; ?>

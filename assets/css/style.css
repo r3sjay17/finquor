@@ -46,7 +46,6 @@ textarea.form-control{
     color: #fff;  
 	position: relative;
     text-shadow: 2px 2px 2px #000;
-    font-size: 23px;
 }
 
 .btn-theme:hover{
@@ -1570,7 +1569,7 @@ section.sOne .item .img-wrapper img {
 	}
 	.btn-theme {
 	    padding: 5px 5%;
-	    font-size: 13px;
+	    font-size: 13px !important;
 	}
 	section.heading {
 		height: 50vh;

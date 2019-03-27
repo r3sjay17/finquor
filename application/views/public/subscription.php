@@ -13,7 +13,7 @@
 					<li>and more...</li>
 				</ul>
 				<h1>FREE</h1>
-				<a href="<?=base_url('signup')?>" class="btn btn-theme">Get Started</a>
+				<a href="<?=base_url('signup')?>" class="btn btn-theme">Sign up for FREE</a>
 			</div>
 			<div class="col">
 				<h2><i class="fa fa-user"></i> Advisor</h2>
@@ -25,7 +25,7 @@
 					<li>and more...</li>
 				</ul>
 				<h3>Pricing<span>We are working on it, please hang tight</span></h3>
-				<a href="<?=base_url('signup')?>" class="btn btn-theme">Get Started</a>
+				<a href="<?=base_url('signup')?>" class="btn btn-theme">Sign up for FREE</a>
 			</div>
 		</div>
 		<div class="row sponsor">

@@ -222,6 +222,6 @@
 				</div>
 			</div>
 		</div>
-		<a href="<?=base_url('signup')?>" class="btn btn-theme3">Get Started</a>
+		<a href="<?=base_url('signup')?>" class="btn btn-theme3">Sign up for FREE</a>
 	</div>
 </section>

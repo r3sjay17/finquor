@@ -2,8 +2,8 @@
 
 <section class="heading">
 	<div class="hText">
-		<h1>The best time to manage <br> your finances is, TODAY.</h1>
-		<a href="<?=base_url('signup')?>" class="btn btn-theme">Get Started</a>
+		<h1>Imagine your hub <br> for real people and advisors.</h1>
+		<a href="<?=base_url('signup')?>" class="btn btn-theme">Sign up for FREE</a>
 		<p>Sign up now for greater deals once we are live</p>
 	</div>
 
@@ -300,7 +300,7 @@
 			</div>
 
 		</div>
-		<a href="<?=base_url('signup')?>" class="btn btn-theme">Get Started</a>
+		<a href="<?=base_url('signup')?>" class="btn btn-theme">Sign up for FREE</a>
 	</div>
 </section>
 

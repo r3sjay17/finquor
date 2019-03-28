@@ -17,7 +17,7 @@
 			<i class="fa fa-user"></i> <a href="<?=base_url('form/client/signup')?>" class="btn btn-theme2">Client</a>
 		</div>
 		<div class="fineprint">
-			<p>Once you registered, you agree to Finquor's</p>
+			<p>Once you registered, you agree to FinQuor's</p>
 		<p><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms & Conditions</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></p>
 		</div>
 		

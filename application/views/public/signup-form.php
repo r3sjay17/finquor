@@ -101,7 +101,7 @@
 
 			</div>
 
-			<div class="terms">By Signing up, you agree to Canva's <br><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms of Use</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></div>
+			<div class="terms">By Signing up, you agree to FinQuor's <br><a href="#" data-toggle="modal" data-target="#termsConditionsModal">Terms of Use</a> and <a href="#" data-toggle="modal" data-target="#termsConditionsModal">Privacy Policy</a></div>
 			<!-- <h4><i>If you already have an account, <a href="">LOG IN HERE</a></i></h4> -->
 		</div>
 	</div>

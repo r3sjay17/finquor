@@ -35,9 +35,9 @@
 				<div class="row">
 					<div class="col">
 						<div class="social-links">
-							<a href="#"><i class="fa fa-facebook-square"></i></a>
-							<a href="#"><i class="fa fa-twitter-square"></i></a>
-							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="https://www.facebook.com/FinQuor/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+							<a href="https://twitter.com/finquor" target="_blank"><i class="fa fa-twitter-square"></i></a>
+							<a href="https://www.instagram.com/finquor" target="_blank"><i class="fa fa-instagram"></i></a>
 							<a href="#"><i class="fa fa-youtube-play"></i></a>
 						</div>
 					</div>

@@ -86,9 +86,9 @@
 
 		<?php if($cpage != 'signup') : ?>
 		<div class="social-media">
-			<a href="#" class="sm-fb"><i class="fa fa-facebook-square"></i></a>
-			<a href="#" class="sm-twitter"><i class="fa fa-twitter-square"></i></a>
-			<a href="#" class="sm-instagram"><i class="fa fa-instagram"></i></a>
+			<a href="https://www.facebook.com/FinQuor/" target="_blank" class="sm-fb"><i class="fa fa-facebook-square"></i></a>
+			<a href="https://twitter.com/finquor" target="_blank" class="sm-twitter"><i class="fa fa-twitter-square"></i></a>
+			<a href="https://www.instagram.com/finquor" target="_blank" class="sm-instagram"><i class="fa fa-instagram"></i></a>
 			<a href="mailto: finquor@gmail.com" class="sm-mail"><i class="fa fa-envelope-o"></i></a>
 			<p>SHARE</p>
 		</div>

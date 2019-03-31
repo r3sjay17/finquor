@@ -28,7 +28,7 @@
 								<div class="input-group-prepend">
 								  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
 								</div>
-								<input type="date" name="bdate" class="form-control" max="<?=date('Y-m-d')?>" required>
+								<input type="text" name="bdate" class="form-control datepicker" autocomplete="off"> max="<?=date('Y-m-d')?>" required>
 					  		</div>
 						</div>
 						<div class="col">

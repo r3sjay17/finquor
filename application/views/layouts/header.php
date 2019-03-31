@@ -22,11 +22,13 @@
 	<link rel="stylesheet" href="<?=base_url('assets/css/slick.css')?>">
 	<link rel="stylesheet" href="<?=base_url('assets/css/slick-theme.css')?>">
 	<link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
+	<link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
 
 	<!-- script files -->
 	<script src="<?=base_url('assets/js/jquery-3.3.1.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/bootstrap.bundle.min.js')?>"></script>
 	<script src="<?=base_url('assets/js/slick.js')?>"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 </head>
 <body>
 	<?php $cpage = strtolower(str_replace(' ', '-', $page)); ?>

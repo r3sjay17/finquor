@@ -44,7 +44,7 @@ class Actions extends CI_Controller {
 							':lname' => $lname,
 							':email' => $email,
 							//':mobile' => $mobile,
-							':bdate' => $bdate,
+							':bdate' => date('Y-m-d', strtotime($bdate)),
 							':gender' => $gender,
 							//':pwd' => $password,
 							':status' => 1,

@@ -1,5 +1,13 @@
 jQuery(function($) {
 
+	var ndate = new Date();
+
+	$('.datepicker').datepicker({
+		autoclose: true, 
+      	format: "mm/dd/yyyy", 
+        maxDate: ndate
+	});
+
 	$('.heading').on('click', '.btn-explore', function() {
  		$('html, body').animate({scrollTop: $('.sOne').offset().top}, 'slow');
 	});
